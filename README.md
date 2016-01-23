@@ -2,6 +2,8 @@ Loop
 ====
 A Google Play Music desktop player built with [Electron](http://electron.atom.io).
 
+![Loop](https://raw.githubusercontent.com/twostairs/loop/master/loop-screenshot.png)
+
 ## What?
 
 Loop is [Google's Play Music](https://play.google.com/music/listen) service, electronized into a native application for Mac OS X (and probably Windows and Linux, although I haven't tested it).
