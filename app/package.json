@@ -1,0 +1,50 @@
+{
+  "name": "loop",
+  "productName": "Loop",
+  "version": "1.0.0",
+  "description": "A Google Play Music desktop player built with Electron by the nice people at twostairs in Berlin!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twostairs/loop.git"
+  },
+  "keywords": [
+    "electron",
+    "electron-app",
+    "loop",
+    "google",
+    "play",
+    "music",
+    "desktop",
+    "player",
+    "googleplay",
+    "streaming",
+    "audio"
+  ],
+  "author": {
+    "name": "Marius @mrusme M.",
+    "email": "marius@twostairs.com",
+    "url": "https://twostairs.com"
+  },
+  "contributors": [
+    "Dora A. <dora@twostairs.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twostairs/loop/issues"
+  },
+  "homepage": "https://github.com/twostairs/loop#readme",
+  "devDependencies": {
+    "electron-packager": "^5.2.1",
+    "electron-prebuilt": "^0.36.5",
+    "gulp": "^3.9.0",
+    "gulp-electron": "0.0.10"
+  },
+  "dependencies": {
+    "lodash": "^4.0.0",
+    "node-notifier": "^4.4.0"
+  }
+}
