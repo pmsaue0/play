@@ -3,7 +3,6 @@
 const electron = require('electron');
 const _ = require('lodash');
 const path = require('path');
-const notifier = require('node-notifier');
 const loopMenu = require(path.join(__dirname, 'menu.js'));
 
 const app = electron.app;
@@ -20,7 +19,7 @@ function stylePlayer() {
 
 function triggerNotification(_content) {
   if (mainWindow.isFocused()) return;
-  notifier.notify(_content);
+  mainWindow.webContents.executeJavaScript('new Notification("' + _content.title + '", { body: "' + _content.body + '"});');
 }
 
 app.on('ready', function () {
@@ -43,6 +42,7 @@ app.on('ready', function () {
   mainWindow.loadURL('https://play.google.com/music/listen');
 
   mainWindow.webContents.on('dom-ready', function() {
+    mainWindow.webContents.executeJavaScript('Notification.requestPermission();');
     stylePlayer();
   });
 
@@ -68,7 +68,7 @@ app.on('ready', function () {
     var m;
 
     if ((m = titleRegex.exec(windowTitle)) !== null) {
-      triggerNotification({ title: m[2], message: m[1], icon: path.join(__dirname, 'images', 'appicon.png') });
+      triggerNotification({ title: m[2], body: m[1] });
     }
   });
 

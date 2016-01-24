@@ -39,7 +39,6 @@
   },
   "electron-version": "0.35.4",
   "dependencies": {
-    "lodash": "^4.0.0",
-    "node-notifier": "^4.4.0"
+    "lodash": "^4.0.0"
   }
 }
