@@ -16,15 +16,17 @@ let mainWindowLastTitle;
 
 const platform = process.platform;
 
+function makeDraggable() {
+  if (platform == 'linux') {
+      mainWindow.webContents.insertCSS('paper-toolbar { -webkit-app-region: drag; }');
+      mainWindow.webContents.insertCSS('paper-toolbar .gb_Ie.gb_T.gb_X { -webkit-app-region: no-drag; }');
+      mainWindow.webContents.insertCSS('paper-toolbar #input { -webkit-app-region: no-drag; }');
+      mainWindow.webContents.insertCSS('paper-toolbar paper-icon-button { -webkit-app-region: no-drag; }');
+      }
+}
+
 function stylePlayer() {
   mainWindow.webContents.insertCSS('#player paper-icon-button[data-id="show-miniplayer"] { display: none; }');
-
-  if (platform == 'linux') {
-    mainWindow.webContents.insertCSS('paper-toolbar { -webkit-app-region: drag; }');
-    mainWindow.webContents.insertCSS('paper-toolbar .gb_Ie.gb_T.gb_X { -webkit-app-region: no-drag; }');
-    mainWindow.webContents.insertCSS('paper-toolbar #input { -webkit-app-region: no-drag; }');
-    mainWindow.webContents.insertCSS('paper-toolbar paper-icon-button { -webkit-app-region: no-drag; }');
-  }
 }
 
 function triggerNotification(_content) {
@@ -59,6 +61,8 @@ app.on('ready', function () {
 
   mainWindow.webContents.on('dom-ready', function() {
     stylePlayer();
+
+    makeDraggable();
   });
 
   mainWindow.on('closed', function() {
