@@ -13,6 +13,17 @@ const globalShortcut = electron.globalShortcut;
 let mainWindow;
 let mainWindowLastTitle;
 
+const platform = process.platform;
+
+function makeDraggable() {
+  if (platform == 'linux') {
+      mainWindow.webContents.insertCSS('paper-toolbar { -webkit-app-region: drag; }');
+      mainWindow.webContents.insertCSS('paper-toolbar .gb_Ie.gb_T.gb_X { -webkit-app-region: no-drag; }');
+      mainWindow.webContents.insertCSS('paper-toolbar #input { -webkit-app-region: no-drag; }');
+      mainWindow.webContents.insertCSS('paper-toolbar paper-icon-button { -webkit-app-region: no-drag; }');
+      }
+}
+
 function stylePlayer() {
   mainWindow.webContents.insertCSS('#player paper-icon-button[data-id="show-miniplayer"] { display: none; }');
 }
@@ -25,7 +36,7 @@ function triggerNotification(_content) {
 app.on('ready', function () {
   Menu.setApplicationMenu(Menu.buildFromTemplate(loopMenu.getMenuTemplate(app)));
 
-  mainWindow = new BrowserWindow({
+  var options   = {
     width: 1000,
     height: 800,
     center: true,
@@ -36,14 +47,22 @@ app.on('ready', function () {
     webPreferences: {
       defaultFontSize: 14,
       defaultEncoding: 'UTF-8'
+        }
+    };
+
+    if (process.platform.match(/^linux/)) {
+      options.frame = false;
     }
-  });
+
+    mainWindow = new BrowserWindow(options);
 
   mainWindow.loadURL('https://play.google.com/music/listen');
 
   mainWindow.webContents.on('dom-ready', function() {
     mainWindow.webContents.executeJavaScript('Notification.requestPermission();');
     stylePlayer();
+
+    makeDraggable();
   });
 
   mainWindow.on('closed', function() {

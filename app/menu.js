@@ -23,6 +23,18 @@ exports.getMenuTemplate = function(app) {
             if (focusedWindow)
               focusedWindow.setFullScreen(!focusedWindow.isFullScreen());
           }
+        },
+        {
+          type: "separator"
+        },
+        {
+          label: "Quit",
+          accelerator: "CmdOrCtrl+W",
+          click: function (item, focusedWindow) {
+            if (focusedWindow) {
+              focusedWindow.close();
+            }
+          }
         }
       ]
     },
