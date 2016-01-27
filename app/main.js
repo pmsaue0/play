@@ -33,6 +33,31 @@ function stylePlayer() {
   mainWindow.webContents.insertCSS(theme);
 }
 
+function getCurrentSong() {
+  var windowTitle = mainWindow.getTitle();
+  console.log("Change: " + windowTitle);
+
+  if(typeof windowTitle === "undefined" || windowTitle === null || _.trim(windowTitle).trim() === "" || windowTitle === mainWindowLastTitle) return null;
+
+  var ignoreTitles = [/^listen.{0,1}now.{0,10}google.{0,1}play.{0,1}music$/i, /^loop$/i, /^google.{0,1}play.{0,1}music$/i];
+  for(var i = 0; i < ignoreTitles.length; i++) {
+    if (ignoreTitles[i].exec(windowTitle) !== null) return null;
+  }
+
+  console.log("Last: " + mainWindowLastTitle);
+  mainWindowLastTitle = windowTitle;
+  console.log("Current: " + windowTitle);
+
+  var titleRegex = /^(.+) - (.+) - Google Play Music$/;
+  var m;
+
+  if ((m = titleRegex.exec(windowTitle)) !== null) {
+    return { artist: m[2], song: m[1] };
+  } else {
+    return null;
+  }
+}
+
 function triggerNotification(_content) {
   if (mainWindow.isFocused()) return;
   mainWindow.webContents.executeJavaScript('new Notification("' + _content.title + '", { body: "' + _content.body + '"});');
@@ -41,72 +66,77 @@ function triggerNotification(_content) {
 app.on('ready', function () {
   Menu.setApplicationMenu(Menu.buildFromTemplate(loopMenu.getMenuTemplate(app)));
 
-  var options   = {
-    width: 1000,
-    height: 800,
-    center: true,
-    title: 'Loop',
-    titleBarStyle: 'hidden',
-    // transparent: true,
-    icon: path.join(__dirname, 'images', 'appicon.png'),
-    acceptFirstMouse: true,
-    webPreferences: {
-      defaultFontSize: 14,
-      defaultEncoding: 'UTF-8'
-        }
+  var windowWidth = 1000, windowHeight = 800;
+  storage.get('windowSize')
+  .then(function(data) {
+    console.log(data);
+    var size = JSON.parse(data);
+    windowWidth = size[0];
+    windowHeight = size[1];
+  })
+  .then(function() {
+    var options = {
+      width: windowWidth,
+      height: windowHeight,
+      center: true,
+      title: 'Loop',
+      titleBarStyle: 'hidden',
+      // transparent: true,
+      icon: path.join(__dirname, 'images', 'appicon.png'),
+      acceptFirstMouse: true,
+      webPreferences: {
+        defaultFontSize: 14,
+        defaultEncoding: 'UTF-8'
+      }
     };
 
     if (process.platform.match(/^linux/)) {
       options.frame = false;
     }
 
+    console.log(options);
     mainWindow = new BrowserWindow(options);
+  })
+  .then(function() {
+    mainWindow.webContents.on('dom-ready', function() {
+      mainWindow.webContents.executeJavaScript('Notification.requestPermission();');
+      stylePlayer();
 
-  mainWindow.loadURL('https://play.google.com/music/listen');
+      makeDraggable();
+    });
 
-  mainWindow.webContents.on('dom-ready', function() {
-    mainWindow.webContents.executeJavaScript('Notification.requestPermission();');
-    stylePlayer();
+    mainWindow.on('resize', function() {
+      storage.set('windowSize', JSON.stringify(mainWindow.getSize()));
+    });
 
-    makeDraggable();
-  });
+    mainWindow.on('closed', function() {
+      mainWindow = null;
+    });
 
-  mainWindow.on('closed', function() {
-    mainWindow = null;
-  });
+    mainWindow.on('page-title-updated', function() {
+      var currentSong = getCurrentSong();
 
-  mainWindow.on('page-title-updated', function() {
-    var windowTitle = mainWindow.getTitle();
+      if(typeof currentSong !== "undefined" && currentSong !== null) {
+        console.log(currentSong);
+        triggerNotification({ title: currentSong.artist, body: currentSong.song });
+      }
+    });
+  })
+  .then(function() {
+    mainWindow.loadURL('https://play.google.com/music/listen');
+  })
+  .then(function() {
+    globalShortcut.register('MediaPlayPause', function() {
+      mainWindow.webContents.executeJavaScript('document.querySelector(\'paper-icon-button[data-id="play-pause"]\').click();');
+    });
 
-    if(typeof windowTitle === "undefined" || windowTitle === null || _.trim(windowTitle).trim() === "" || windowTitle === mainWindowLastTitle) return;
+    globalShortcut.register('MediaNextTrack', function() {
+      mainWindow.webContents.executeJavaScript('document.querySelector(\'paper-icon-button[data-id="forward"]\').click();');
+    });
 
-    var ignoreTitles = [/^listen.{0,1}now.{0,10}google.{0,1}play.{0,1}music$/i, /^loop$/i, /^google.{0,1}play.{0,1}music$/i];
-    for(var i = 0; i < ignoreTitles.length; i++) {
-      if (ignoreTitles[i].exec(windowTitle) !== null) return;
-    }
-
-    console.log("Last: " + mainWindowLastTitle);
-    mainWindowLastTitle = windowTitle;
-    console.log("Current: " + windowTitle);
-
-    var titleRegex = /^(.+) - (.+) - Google Play Music$/;
-    var m;
-
-    if ((m = titleRegex.exec(windowTitle)) !== null) {
-      triggerNotification({ title: m[2], body: m[1] });
-    }
-  });
-
-  globalShortcut.register('MediaPlayPause', function() {
-    mainWindow.webContents.executeJavaScript('document.querySelector(\'paper-icon-button[data-id="play-pause"]\').click();');
-  });
-
-  globalShortcut.register('MediaNextTrack', function() {
-    mainWindow.webContents.executeJavaScript('document.querySelector(\'paper-icon-button[data-id="forward"]\').click();');
-  });
-
-  globalShortcut.register('MediaPreviousTrack', function() {
-    mainWindow.webContents.executeJavaScript('document.querySelector(\'paper-icon-button[data-id="rewind"]\').click();');
+    globalShortcut.register('MediaPreviousTrack', function() {
+      mainWindow.webContents.executeJavaScript('document.querySelector(\'paper-icon-button[data-id="rewind"]\').click();');
+    });
   });
 });
 
