@@ -5,6 +5,7 @@ const _ = require('lodash');
 const path = require('path');
 const loopMenu = require(path.join(__dirname, 'menu.js'));
 const fs = require("fs");
+const storage = require('electron-json-storage');
 
 const app = electron.app;
 const Menu = electron.Menu;

@@ -35,10 +35,10 @@
     "url": "https://github.com/twostairs/loop/issues"
   },
   "homepage": "https://github.com/twostairs/loop#readme",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "electron-version": "0.35.4",
   "dependencies": {
+    "electron-json-storage": "^1.0.0",
     "lodash": "^4.0.0"
   }
 }
