@@ -3,7 +3,7 @@
   "productName": "Loop",
   "description": "A Google Play Music desktop player built with Electron by the nice people at twostairs in Berlin!",
   "copyright": "A Google Play Music desktop player built with Electron by the nice people at twostairs in Berlin!",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js"
