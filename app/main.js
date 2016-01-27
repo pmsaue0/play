@@ -69,10 +69,11 @@ app.on('ready', function () {
   var windowWidth = 1000, windowHeight = 800;
   storage.get('windowSize')
   .then(function(data) {
-    console.log(data);
-    var size = JSON.parse(data);
-    windowWidth = size[0];
-    windowHeight = size[1];
+    if(Object.keys(data).length > 0) {
+      var size = JSON.parse(data);
+      windowWidth = size[0];
+      windowHeight = size[1];
+    }
   })
   .then(function() {
     var options = {
