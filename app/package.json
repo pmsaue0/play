@@ -30,6 +30,9 @@
     "email": "marius@twostairs.com",
     "url": "https://twostairs.com"
   },
+  "contributors": [
+    "Dora A. <dora@twostairs.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/twostairs/loop/issues"

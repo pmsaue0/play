@@ -30,4 +30,4 @@ You can either download of of the files from the [releases](https://github.com/t
 
 ## Who?
 
-[Me](https://twitter.com/mrusme).
+[Me](https://twitter.com/mrusme) the code, [she](https://twitter.com/doriiimaus) the logo.
