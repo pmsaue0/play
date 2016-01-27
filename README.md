@@ -1,4 +1,4 @@
-Loop
+Loop <img src="https://raw.githubusercontent.com/twostairs/loop/master/app/images/appicon.png" width="32px"/>
 ====
 A Google Play Music desktop player built with [Electron](http://electron.atom.io).
 
