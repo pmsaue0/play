@@ -26,7 +26,7 @@ Another benefit of Loop is, that it integrates quite well into your desktop. Wit
 
 ## Where?
 
-You can either download of of the files from the [releases](https://github.com/twostairs/loop/tree/master/releases) folder and run a pre-compiled version of Loop, or you can of course clone this repository and build the app by yourself, simply by following the instructions in [Jakub Szwacz' electron-boilerplate](https://github.com/szwacz/electron-boilerplate) (awesome work, man!).
+You can either download the files from the [releases](https://github.com/twostairs/loop/releases) site and run a pre-compiled version of Loop, or you can clone this repository and build the app by yourself, simply by following the instructions in [Jakub Szwacz' electron-boilerplate](https://github.com/szwacz/electron-boilerplate) (awesome work, man!).
 
 ## Who?
 
