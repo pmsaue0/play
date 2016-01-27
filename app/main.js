@@ -4,6 +4,7 @@ const electron = require('electron');
 const _ = require('lodash');
 const path = require('path');
 const loopMenu = require(path.join(__dirname, 'menu.js'));
+const fs = require("fs");
 
 const app = electron.app;
 const Menu = electron.Menu;
@@ -25,7 +26,10 @@ function makeDraggable() {
 }
 
 function stylePlayer() {
+  var theme = fs.readFileSync(path.join(__dirname, 'themes', 'theme.css'), "utf8");
+
   mainWindow.webContents.insertCSS('#player paper-icon-button[data-id="show-miniplayer"] { display: none; }');
+  mainWindow.webContents.insertCSS(theme);
 }
 
 function triggerNotification(_content) {
@@ -42,6 +46,7 @@ app.on('ready', function () {
     center: true,
     title: 'Loop',
     titleBarStyle: 'hidden',
+    // transparent: true,
     icon: path.join(__dirname, 'images', 'appicon.png'),
     acceptFirstMouse: true,
     webPreferences: {
