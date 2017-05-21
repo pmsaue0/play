@@ -14,4 +14,4 @@ npm run start
 npm run release
 ```
 
-![Screenshot](screen.png "Screenshot")
+![Screenshot](screenshot.png "Screenshot")
