@@ -1,4 +1,4 @@
-# Minimal layout for Google Music
+# Minimal desktop player for Google Music
 UI wrapper for Google Music based on https://github.com/twostairs/loop
 
 ### Install
