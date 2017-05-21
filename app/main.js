@@ -66,7 +66,7 @@ function triggerNotification(_content) {
 app.on('ready', function () {
   Menu.setApplicationMenu(Menu.buildFromTemplate(loopMenu.getMenuTemplate(app)));
 
-  var windowWidth = 1000, windowHeight = 800;
+  var windowWidth = 1250, windowHeight = 800;
   storage.get('windowSize')
   .then(function(data) {
     if(Object.keys(data).length > 0) {
@@ -119,12 +119,12 @@ app.on('ready', function () {
 
       if(typeof currentSong !== "undefined" && currentSong !== null) {
         console.log(currentSong);
-        triggerNotification({ title: currentSong.artist, body: currentSong.song });
+        // triggerNotification({ title: currentSong.artist, body: currentSong.song });
       }
     });
   })
   .then(function() {
-    mainWindow.loadURL('https://play.google.com/music/listen');
+    mainWindow.loadURL('https://play.google.com/music/listen#/recents');
   })
   .then(function() {
     globalShortcut.register('MediaPlayPause', function() {
@@ -138,6 +138,15 @@ app.on('ready', function () {
     globalShortcut.register('MediaPreviousTrack', function() {
       mainWindow.webContents.executeJavaScript('document.querySelector(\'paper-icon-button[data-id="rewind"]\').click();');
     });
+
+    globalShortcut.register('F5', function() {
+      mainWindow.webContents.goBack();
+    });
+
+    globalShortcut.register('F6', function() {
+      mainWindow.webContents.executeJavaScript('document.querySelector(\'[data-id="auto-playlist-thumbs-up"]\').click();');
+    });
+
   });
 });
 
