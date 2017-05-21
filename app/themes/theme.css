@@ -194,7 +194,7 @@ body.material .song-row td, body.material .upload-progress-row td {
 .material .album-view .material-container-details,
 .material .playlist-view .material-container-details {
     position: relative;
-    width: 300px;
+    width: 301px;
     max-width: 0;
     margin-top: 20px;
     float: left;
@@ -232,3 +232,56 @@ body.material .song-row td, body.material .upload-progress-row td {
     margin: 0;
 }
 
+.material .sj-play-button-11 #pulse.sj-play-button {
+  background: #ccc;
+}
+
+.material .sj-play-button-11 #buttonContent.sj-play-button {
+  background: #fefefe;
+}
+
+/* song table styles */
+
+.material .album-view .gpm-detail-page-header-0 #imageWrapper.gpm-detail-page-header {
+  width: 420px;
+  height: 420px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.material .album-view .gpm-detail-page-header-0 .detail-wrapper.gpm-detail-page-header {
+  position: absolute;
+  top: 420px;
+  margin-top: 30px;
+  padding: 0;
+  left: 0;
+  width: 420px;
+  overflow: visible;
+}
+
+.material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="title"] {
+  overflow: visible;
+  white-space: normal;
+}
+
+.material .album-view .song-table {
+  position: relative;
+  top: -83px;
+  left: 420px;
+  width: calc(100% - 420px);
+}
+
+.material .album-view .gpm-detail-page-header-0 .detail-wrapper.gpm-detail-page-header > div.gpm-detail-page-header {
+  align-items: flex-start;
+}
+
+.detail-view .view-header paper-button, .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="buttons"] {
+  margin-top: 30px;
+  color: #aeaeae;
+  text-align: left;
+}
+
+.detail-view .view-header paper-button iron-icon {
+  display: none;
+}

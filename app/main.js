@@ -63,10 +63,14 @@ function triggerNotification(_content) {
   mainWindow.webContents.executeJavaScript('new Notification("' + _content.title + '", { body: "' + _content.body + '"});');
 }
 
+function updateImage() {
+  mainWindow.webContents.executeJavaScript("document.querySelector('.style-scope.gpm-detail-page-header img').src=''+document.querySelector('.style-scope.gpm-detail-page-header img').src.replace('s360', 's1024')+'';");
+}
+
 app.on('ready', function () {
   Menu.setApplicationMenu(Menu.buildFromTemplate(loopMenu.getMenuTemplate(app)));
 
-  var windowWidth = 1250, windowHeight = 800;
+  var windowWidth = 1280, windowHeight = 800;
   storage.get('windowSize')
   .then(function(data) {
     if(Object.keys(data).length > 0) {
@@ -80,7 +84,7 @@ app.on('ready', function () {
       width: windowWidth,
       height: windowHeight,
       center: true,
-      title: 'Loop',
+      title: 'Play',
       titleBarStyle: 'hidden',
       // transparent: true,
       icon: path.join(__dirname, 'images', 'appicon.png'),
@@ -114,9 +118,12 @@ app.on('ready', function () {
       mainWindow = null;
     });
 
+    mainWindow.webContents.on('did-navigate-in-page', function() {
+      setTimeout(function(){ updateImage(); }, 1500);
+    });
+
     mainWindow.on('page-title-updated', function() {
       var currentSong = getCurrentSong();
-
       if(typeof currentSong !== "undefined" && currentSong !== null) {
         console.log(currentSong);
         // triggerNotification({ title: currentSong.artist, body: currentSong.song });
@@ -137,6 +144,10 @@ app.on('ready', function () {
 
     globalShortcut.register('MediaPreviousTrack', function() {
       mainWindow.webContents.executeJavaScript('document.querySelector(\'paper-icon-button[data-id="rewind"]\').click();');
+    });
+
+    globalShortcut.register('F4', function() {
+      mainWindow.webContents.executeJavaScript('document.querySelector(\'.style-scope.gpm-detail-page-header\').click();');
     });
 
     globalShortcut.register('F5', function() {

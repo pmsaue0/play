@@ -11,9 +11,8 @@ npm install
 npm run start
 ```
 ### Build
-Requirement `npm install electron-packager -g`
 ```
-electron-packager . play --platform=darwin --arch=x64 --overwrite=true
+npm run release
 ```
 
 ![Screenshot](screen.png "Screenshot")

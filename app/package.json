@@ -1,16 +1,15 @@
 {
-  "name": "loop",
-  "productName": "Loop",
+  "name": "play",
+  "productName": "Play",
   "description": "A Google Play Music desktop player built with Electron by the nice people at twostairs in Berlin!",
-  "copyright": "A Google Play Music desktop player built with Electron by the nice people at twostairs in Berlin!",
-  "version": "1.1.0",
+  "version": "1.0.2",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/twostairs/loop.git"
+    "url": "git+https://github.com/pmsaue0/play.git"
   },
   "keywords": [
     "electron",
@@ -26,18 +25,10 @@
     "audio"
   ],
   "author": {
-    "name": "Marius @mrusme M.",
-    "email": "marius@twostairs.com",
-    "url": "https://twostairs.com"
+    "name": "Phillip Sauerbeck",
+    "email": "psauerbeck@gmail.com"
   },
-  "contributors": [
-    "Dora A. <dora@twostairs.com>"
-  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/twostairs/loop/issues"
-  },
-  "homepage": "https://github.com/twostairs/loop#readme",
   "devDependencies": {},
   "electron-version": "0.35.4",
   "dependencies": {
