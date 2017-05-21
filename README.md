@@ -1,6 +1,5 @@
-# google-music-play-around
-UI wrapper for Google Music
-based on https://github.com/twostairs/loop
+# Minimal layout for Google Music
+UI wrapper for Google Music based on https://github.com/twostairs/loop
 
 ### Install
 ```
