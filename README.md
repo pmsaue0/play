@@ -4,7 +4,7 @@ UI wrapper for Google Music based on https://github.com/twostairs/loop
 ### Download the zipped .dmg
 https://github.com/pmsaue0/play/releases
 
-### Manual Install
+### Or clone this repo and do a manual install
 ```
 npm install
 ```
