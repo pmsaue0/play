@@ -64,7 +64,7 @@ function triggerNotification(_content) {
 }
 
 function updateImage() {
-  mainWindow.webContents.executeJavaScript("document.querySelector('.style-scope.gpm-detail-page-header img').src=''+document.querySelector('.style-scope.gpm-detail-page-header img').src.replace(/(s360|s180)/, 's1024')+'';");
+  mainWindow.webContents.executeJavaScript("document.querySelector('.style-scope.gpm-detail-page-header img').src=''+document.querySelector('.style-scope.gpm-detail-page-header img').src.replace(/\=s.*?-c-/, '=s1024-c-')+'';");
 }
 
 app.on('ready', function () {
@@ -119,7 +119,7 @@ app.on('ready', function () {
     });
 
     mainWindow.webContents.on('did-navigate-in-page', function() {
-      setTimeout(function(){ updateImage(); }, 1500);
+      setTimeout(function(){ updateImage(); }, 1000);
     });
 
     mainWindow.on('page-title-updated', function() {

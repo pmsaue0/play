@@ -265,6 +265,10 @@ body.material .song-row td, body.material .upload-progress-row td {
   white-space: normal;
 }
 
+.material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="image"] {
+  box-shadow: none;
+}
+
 .material .album-view .song-table {
   position: relative;
   top: -83px;
