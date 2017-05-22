@@ -64,7 +64,7 @@ function triggerNotification(_content) {
 }
 
 function updateImage() {
-  mainWindow.webContents.executeJavaScript("document.querySelector('.style-scope.gpm-detail-page-header img').src=''+document.querySelector('.style-scope.gpm-detail-page-header img').src.replace('s360', 's1024')+'';");
+  mainWindow.webContents.executeJavaScript("document.querySelector('.style-scope.gpm-detail-page-header img').src=''+document.querySelector('.style-scope.gpm-detail-page-header img').src.replace(/(s360|s180)/, 's1024')+'';");
 }
 
 app.on('ready', function () {
