@@ -312,7 +312,7 @@ body.material .song-row td, body.material .upload-progress-row td {
 }
 
 .detail-view .view-header paper-button, .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="buttons"] {
-  margin-top: 30px;
+  margin-top: 44px;
   color: #aeaeae;
   text-align: left;
 }
