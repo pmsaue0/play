@@ -14,7 +14,7 @@ When you start the app for the first time you will be prompted to sign in throug
 ### Option 1: [Download the zipped .DMG](https://github.com/pmsaue0/play/releases) to install on OS X
 
 ### Option 2: Clone/Fork this repo and do a manual install.
-You can also follow these steps if you want to build for Windows or Linux
+You can follow these steps if you want to build for OSX, Windows or Linux
 
 ```
 npm install
