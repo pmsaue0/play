@@ -1,7 +1,9 @@
 # Minimal desktop player for Google Music
-UI wrapper for Google Music based on https://github.com/twostairs/loop
+![Screenshot](screenshot.png "Screenshot")
 
-### Download the zipped .dmg
+This is a UI wrapper for Google Music based on https://github.com/twostairs/loop
+
+### Download the zipped .dmg to install on OS X
 https://github.com/pmsaue0/play/releases
 
 ### Or clone this repo and do a manual install
@@ -16,5 +18,3 @@ npm run start
 ```
 npm run release
 ```
-
-![Screenshot](screenshot.png "Screenshot")
