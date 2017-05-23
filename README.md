@@ -9,9 +9,11 @@ When you start the app for the first time you will be prompted to sign in throug
 ![Sign In Screenshot ](http://i.imgur.com/2zwSoJz.png "Screenshot")
 
 
-### Install Method 1: [Download the zipped .DMG](https://github.com/pmsaue0/play/releases) to install on OS X
+# Installing
 
-### Install Method 2: Clone/Fork this repo and do a manual install.
+### Option 1: [Download the zipped .DMG](https://github.com/pmsaue0/play/releases) to install on OS X
+
+### Option 2: Clone/Fork this repo and do a manual install.
 You can also follow these steps if you want to build for Windows or Linux
 
 ```
