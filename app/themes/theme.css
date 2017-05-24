@@ -162,6 +162,41 @@ gpm-action-buttons {
   left: -10px;
 }
 
+.material #material-one-left {
+  height: 63px;
+  top: -8px;
+  left: -16px;
+  padding-left: 16px;
+  overflow: hidden;
+}
+
+.material #material-one-left .music-logo {
+  margin-top: 8px;
+}
+
+.material #nav-container .nav-toolbar {
+  overflow: hidden;
+}
+
+.material #nav-container .nav-toolbar .paper-icon-button-0 #ink.paper-icon-button,
+.material #material-one-left .paper-icon-button-0 #ink.paper-icon-button {
+  width: 300px;
+  height: 300px;
+  top: -130px;
+  left: -80px;
+}
+
+.material paper-icon-button[icon="menu"] {
+  margin-top: 5px !important;
+}
+
+.material .menu-logo {
+  margin-bottom: -5px !important;
+}
+.material .music-logo {
+  padding-top: 5px !important;
+}
+
 .material .song-table .song-row [data-col="track"] {
   opacity: 0.6;
 }
