@@ -157,6 +157,11 @@ gpm-action-buttons {
     left: 0px !important;
 }
 
+.material .song-table.tight .song-row [data-col="index"] .song-indicator,
+.material .song-table.tight .song-row td[data-col="index"] .hover-button.x-scope[data-id="play"]{
+  left: -10px;
+}
+
 .material .song-table .song-row [data-col="track"] {
   opacity: 0.6;
 }
