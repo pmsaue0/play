@@ -13411,13 +13411,17 @@ hr.hr-mini {
   .navbar .navbar-toggler-right {
     top: 21px; }
 
+html, body {
+  height: 100%;
+}
+
 header.hero, .body-index header {
   background-color: #EDEFF4;
   background-image: url(rebel-angels.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 400px; }
+}
 header h1, header h2 {
   font-weight: 800;
   color: #FC5830;
