@@ -13437,6 +13437,14 @@ header h2 {
   text-align: justify;
   text-transform: uppercase;
 }
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 80px;
+  }
+  header h2 {
+    font-size: 40px;
+  }
+}
 .text-orange {
   color: #FC5830;
 }
@@ -13482,7 +13490,7 @@ img.screenshot {
 
 main {
   background-color: #BBB9B5;
-  padding: 100px;
+  padding: 100px 0;
 }
 
 main a, main a:hover, main a:focus {
