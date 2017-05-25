@@ -13487,6 +13487,13 @@ img.screenshot {
   display: block;
   margin: 40px auto 80px;
 }
+@media (max-width: 767px) {
+  img.screenshot {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+}
 
 main {
   background-color: #BBB9B5;
