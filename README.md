@@ -6,14 +6,13 @@ This is a UI wrapper for Google Music based on [Loop](https://github.com/twostai
 
 When you start the app for the first time you will be prompted to sign in through Google's authentication system.  This is Google asking for your password information, the app does not save or read any login information.  (I recommend that you set up Google's 2-stage verification: https://www.google.com/landing/2step/ but it's not necessary).
 
-![Sign In Screenshot ](http://i.imgur.com/2zwSoJz.png "Screenshot")
+# Install by downloading (option 1)
 
+### [Download the zipped .DMG](https://github.com/pmsaue0/play/releases) to install on OS X
 
-# Installing
+# Install by building (option 2)
 
-### Option 1: [Download the zipped .DMG](https://github.com/pmsaue0/play/releases) to install on OS X
-
-### Option 2: Clone/Fork this repo and do a manual install.
+### Clone/Fork this repo and do a manual install.
 You can follow these steps if you want to build for OSX, Windows or Linux
 
 ### install dependencies
