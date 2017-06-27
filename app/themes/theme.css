@@ -261,12 +261,6 @@ body.material .song-row td, body.material .upload-progress-row td {
     margin: 0;
 }
 
-.material .iron-icon-1 {
-    width: 20px;
-    height: 20px;
-}
-
-
 .material .material-detail-view .material-container-details .info .title {
   padding-bottom: 10px;
 }
