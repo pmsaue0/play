@@ -331,8 +331,8 @@ body.material .song-row td, body.material .upload-progress-row td {
   display: none;
 }
 
-.material #quick-nav-container gpm-quick-nav {
-  display: none;
+.material #quick-nav-container gpm-quick-nav, .material #quickNavContainer {
+  display: none !important;
 }
 
 .material .gpm-detail-page-header-0 #playButton.gpm-detail-page-header {
