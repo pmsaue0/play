@@ -84,6 +84,10 @@ app.on('ready', function () {
       mainWindow = null;
     });
 
+    mainWindow.on('page-title-updated', function() {
+      setTimeout(function(){ updateImage(); }, 1000);
+    });
+
     mainWindow.webContents.on('did-navigate-in-page', function() {
       setTimeout(function(){ updateImage(); }, 1000);
     });
