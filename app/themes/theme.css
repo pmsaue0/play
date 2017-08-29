@@ -315,6 +315,7 @@ body.material .song-row td, body.material .upload-progress-row td {
   top: -83px;
   left: 420px;
   width: calc(100% - 420px);
+  min-width: 480px;
 }
 
 .material .album-view .gpm-detail-page-header-0 .detail-wrapper.gpm-detail-page-header > div.gpm-detail-page-header {
@@ -344,9 +345,12 @@ body.material .song-row td, body.material .upload-progress-row td {
   .material paper-drawer-panel.mini-nav-enabled paper-header-panel #music-content .g-content,
   .material paper-drawer-panel.mini-nav-enabled paper-header-panel #music-content .recent-view {
     margin: 32px 26px !important;
-    width: 86.6% !important;
+    width: 94.3% !important;
   }
-  .material #material-app-bar .material-one-google {
-    width: 90%;
+  .material .paper-drawer-panel > [main] {
+    width: 92% !important;
+  }
+  .material .album-view .song-table {
+    left: 404px;
   }
 }
