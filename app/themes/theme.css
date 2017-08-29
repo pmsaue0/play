@@ -338,3 +338,15 @@ body.material .song-row td, body.material .upload-progress-row td {
 .material .gpm-detail-page-header-0 #playButton.gpm-detail-page-header {
   margin: 4px 4px 0 16px;
 }
+
+
+@media (max-width: 890px) {
+  .material paper-drawer-panel.mini-nav-enabled paper-header-panel #music-content .g-content,
+  .material paper-drawer-panel.mini-nav-enabled paper-header-panel #music-content .recent-view {
+    margin: 32px 26px !important;
+    width: 86.6% !important;
+  }
+  .material #material-app-bar .material-one-google {
+    width: 90%;
+  }
+}
