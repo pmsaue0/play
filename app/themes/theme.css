@@ -35,7 +35,9 @@ paper-drawer-panel iron-image#material-hero-image, #mainContainer {
     color: #555;
 }
 
-.material .sj-play-button-3 #pulse.sj-play-button {
+.material .sj-play-button-3 #pulse.sj-play-button,
+.material .sj-play-button-2 #pulse.sj-play-button,
+.material #pulse.sj-play-button {
   background: rgba(0, 0, 0, 0.07);
 }
 
