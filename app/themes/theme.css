@@ -1,3 +1,7 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 .material .detail-view .header-container {
   margin: 44px 0 40px 0;
 }
@@ -298,15 +302,23 @@ body.material .song-row td, body.material .upload-progress-row td {
 .material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="title"] {
   overflow: visible;
   white-space: normal;
+  font-size: 24px;
+  width: calc(100% - 50px);
+  line-height: 1.2em;
+  font-weight: 500;
+  color: rgba(0,0,0,0.7);
 }
 
 .material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="subtitle"] {
   color: #FF5722;
-  font-size: 28px;
+  font-size: 24px;
   text-overflow: initial;
   overflow: visible;
   margin-bottom: 10px;
   margin-top: 2px;
+  white-space: normal;
+  font-weight: 200;
+  line-height: 1.2em;
 }
 
 
@@ -320,6 +332,7 @@ body.material .song-row td, body.material .upload-progress-row td {
 
 .material .album-view .gpm-detail-page-header-0 .detail-wrapper.gpm-detail-page-header > div.gpm-detail-page-header {
   align-items: flex-start;
+  margin-bottom: 0;
 }
 
 .detail-view .view-header paper-button, .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="buttons"] {
@@ -338,6 +351,8 @@ body.material .song-row td, body.material .upload-progress-row td {
 
 .material .gpm-detail-page-header-0 #playButton.gpm-detail-page-header {
   margin: 4px 4px 0 16px;
+  position: absolute;
+  right: 0;
 }
 
 
