@@ -1,8 +1,7 @@
 {
   "name": "play",
   "productName": "Play",
-  "description":
-    "A Google Play Music desktop player built with Electron inspired by the nice people at twostairs in Berlin!",
+  "description": "A Google Play Music desktop player built with Electron inspired by the nice people at twostairs in Berlin!",
   "version": "2.0.10",
   "main": "main.js",
   "scripts": {
