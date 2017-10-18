@@ -72,6 +72,15 @@ gpm-action-buttons {
     background-color: transparent !important;
 }
 
+.material .song-table .song-row td,
+.material .song-table.tight .song-row td
+ {
+  height: 43px;
+  line-height: 43px;
+  max-height: 43px;
+  min-height: 43px;
+}
+
 .material .song-table .song-row.selected-song-row td {
     background-color: #FED037 !important;
 }
