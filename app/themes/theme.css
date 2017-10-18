@@ -323,6 +323,7 @@ body.material .song-row td, body.material .upload-progress-row td {
   white-space: normal;
   font-weight: 200;
   line-height: 1.2em;
+  width: calc(100% - 50px);
 }
 
 
