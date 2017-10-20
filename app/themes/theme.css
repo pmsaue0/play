@@ -378,6 +378,7 @@ body.material .song-row td, body.material .upload-progress-row td {
   }
   .material .song-table [data-col="rating"]:last-child {
     width: 70px !important;
+    background-position-y: -12px;
   }
 }
 @media (max-width: 890px) {
