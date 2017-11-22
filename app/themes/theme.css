@@ -301,7 +301,7 @@ body.material .song-row td, body.material .upload-progress-row td {
 .material .album-view .gpm-detail-page-header-0 .detail-wrapper.gpm-detail-page-header {
   position: absolute;
   top: 420px;
-  margin-top: 30px;
+  margin-top: 22px;
   padding: 0;
   left: 0;
   width: 420px;
@@ -314,6 +314,10 @@ body.material .song-row td, body.material .upload-progress-row td {
   border-radius: 5px;
 }
 
+.material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header #explicitIcon {
+  display: none;
+}
+
 .material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="title"] {
   overflow: visible;
   white-space: normal;
@@ -322,6 +326,10 @@ body.material .song-row td, body.material .upload-progress-row td {
   line-height: 1.2em;
   font-weight: 500;
   color: rgba(0,0,0,0.7);
+}
+
+.material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="buttons"] {
+  color: rgba(0,0,0,0.5);
 }
 
 .material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="subtitle"] {
