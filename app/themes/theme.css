@@ -6,8 +6,16 @@ html {
   margin: 20px 0 40px 0;
 }
 
-.material .sj-scrolling-module #moduleHeader .home-palette-id-1, .material .sj-scrolling-module-0 h2 {
-  color: black !important;
+.material .sj-scrolling-module #moduleHeader .home-palette-id-1, .material .sj-scrolling-module-0 h2, .material .sj-scrolling-module-0 h2 span, .material .home-palette-id-1, .material .sj-home .home-palette-id-1, .material .sj-home .home-palette-id-2, .material .sj-home a {
+  color: #212121 !important;
+}
+
+.material .sj-page-tab.sj-page-indicator {
+  color: #cccccc !important;
+}
+
+.material .sj-page-tab.iron-selected.sj-page-indicator {
+  color: #ff5722 !important;
 }
 
 .material paper-header-panel #music-content .recent-view {
