@@ -137,6 +137,10 @@ app.on('ready', function () {
       mainWindow.webContents.executeJavaScript('document.querySelector(\'#playButton\').click();');
     });
 
+    globalShortcut.register('F9', function() {
+      mainWindow.webContents.executeJavaScript('document.querySelector(\'paper-icon-button[data-id="shuffle"]\').click();');
+    });
+
   });
 });
 
