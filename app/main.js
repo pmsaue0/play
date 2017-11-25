@@ -117,8 +117,12 @@ app.on('ready', function () {
       mainWindow.webContents.executeJavaScript('document.querySelector(\'paper-icon-button[data-id="rewind"]\').click();');
     });
 
+    globalShortcut.register('F3', function() {
+      mainWindow.webContents.executeJavaScript('document.querySelector(\'.style-scope[data-type="recents"]\').click();');
+    });
+
     globalShortcut.register('F4', function() {
-      mainWindow.webContents.executeJavaScript('document.querySelector(\'.style-scope.gpm-detail-page-header\').click();');
+      mainWindow.webContents.goForward();
     });
 
     globalShortcut.register('F5', function() {
