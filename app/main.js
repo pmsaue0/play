@@ -91,6 +91,15 @@ app.on('ready', function () {
     mainWindow.webContents.on('did-navigate-in-page', function() {
       setTimeout(function(){ updateImage(); }, 1000);
     });
+
+
+    // mainWindow.on('swipe', (e, cmd) => {
+    //   // Navigate the window back when the user swipes
+    //   if (cmd === 'left' && mainWindow.webContents.canGoBack()) {
+    //     mainWindow.webContents.goBack();
+    //   }
+    // });
+
   })
   .then(function() {
     mainWindow.loadURL('https://play.google.com/music/listen#/recents');
