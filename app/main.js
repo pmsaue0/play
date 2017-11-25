@@ -133,6 +133,10 @@ app.on('ready', function () {
       mainWindow.webContents.executeJavaScript('document.querySelector(\'[data-id="auto-playlist-thumbs-up"]\').click();');
     });
 
+    globalShortcut.register('F8', function() {
+      mainWindow.webContents.executeJavaScript('document.querySelector(\'#playButton\').click();');
+    });
+
   });
 });
 
