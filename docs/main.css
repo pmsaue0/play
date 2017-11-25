@@ -13417,7 +13417,7 @@ html, body {
 
 header.hero, .body-index header {
   background-color: #EDEFF4;
-  background-image: url(rebel-angels.jpg);
+  background-image: url(hare-hoffmann.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -13433,7 +13433,7 @@ header h2 {
   font-family: Optima, Marcellus, times, serif;
   font-size: 80px;
   font-weight: 400;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   text-align: justify;
   text-transform: uppercase;
 }
