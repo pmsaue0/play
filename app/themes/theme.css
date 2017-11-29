@@ -387,16 +387,15 @@ body.material .song-row td, body.material .upload-progress-row td {
   right: 0;
 }
 
+.material .song-table [data-col="rating"]:last-child {
+  width: 70px !important;
+}
 
 @media (max-width: 1300px) {
   .material paper-drawer-panel.mini-nav-enabled paper-header-panel #music-content .g-content,
   .material paper-drawer-panel.mini-nav-enabled paper-header-panel #music-content .recent-view {
     margin: 21px !important;
     width: calc(100% - 42px) !important;
-  }
-  .material .song-table [data-col="rating"]:last-child {
-    width: 70px !important;
-    background-position-y: -12px !important;
   }
 }
 @media (max-width: 890px) {
