@@ -155,4 +155,3 @@ app.on('activate', function () {
     app.quit();
   }
 });
-
