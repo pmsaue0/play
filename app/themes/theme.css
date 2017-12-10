@@ -91,7 +91,7 @@ gpm-action-buttons {
   min-height: 43px;
 }
 
-.material .song-table.tight .song-row .column-content {
+.material .album-view .song-table.tight .song-row .column-content {
   text-overflow: initial;
   overflow: visible;
   width: auto;
@@ -99,8 +99,8 @@ gpm-action-buttons {
   padding: 3px 4px;
 }
 
-.material .song-table .song-row [data-col="title"],
-.material .song-table .song-row [data-col="artist"] {
+.material .album-view .song-table .song-row [data-col="title"],
+.material .album-view .song-table .song-row [data-col="artist"] {
   height: auto !important;
   max-height: none !important;
   line-height: 1.3em !important;
@@ -110,13 +110,18 @@ gpm-action-buttons {
   position: relative;
 }
 
-.material .song-table .song-row .title-right-items {
+.material .album-view .song-table .song-row .title-right-items {
   position: absolute;
   right: -30px;
   top: 50%;
   margin-top: -22px;
 }
 
+.material .album-view .song-table .song-row [data-col="track"] iron-icon.iron-icon-0 {
+  position: absolute !important;
+  top: 50% !important;
+  margin-top: -16px !important;
+}
 
 .material .song-table .song-row.selected-song-row td {
     background-color: #FED037 !important;
