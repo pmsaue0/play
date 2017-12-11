@@ -96,11 +96,12 @@ gpm-action-buttons {
   overflow: visible;
   width: auto;
   height: auto;
-  padding: 3px 4px;
+  margin: 3px 0;
 }
 
 .material .album-view .song-table .song-row [data-col="title"],
-.material .album-view .song-table .song-row [data-col="artist"] {
+.material .album-view .song-table .song-row [data-col="artist"],
+.material .album-view .song-table .song-row [data-col="composer"] {
   height: auto !important;
   max-height: none !important;
   line-height: 1.3em !important;
@@ -117,10 +118,11 @@ gpm-action-buttons {
   margin-top: -22px;
 }
 
-.material .album-view .song-table .song-row [data-col="track"] iron-icon.iron-icon-0 {
-  position: absolute !important;
-  top: 50% !important;
-  margin-top: -16px !important;
+.material .album-view .song-table .song-row [data-col="track"] iron-icon.iron-icon-0,
+.material .album-view .song-table .song-row [data-col="track"] .song-indicator {
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
 }
 
 .material .song-table .song-row.selected-song-row td {
@@ -422,7 +424,15 @@ body.material .song-row td, body.material .upload-progress-row td {
 
 .material .song-table [data-col="rating"]:last-child {
   width: 70px !important;
+  border-bottom: none;
 }
+
+.material .song-table [data-col="rating"][data-rating="5"],
+.material .song-table [data-col="rating"][data-rating="1"] {
+    display: block;
+    position: relative;
+    top: 4px;
+  }
 
 @media screen and (min-resolution: 1.5dppx) {
   .material .song-table [data-col="rating"]:last-child {
