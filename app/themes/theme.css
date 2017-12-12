@@ -101,7 +101,7 @@ gpm-action-buttons {
 
 .material .album-view .song-table .song-row [data-col="title"],
 .material .album-view .song-table .song-row [data-col="artist"],
-.material .album-view .song-table .song-row [data-col="composer"] {
+.material .album-view.has-composer .song-table .song-row [data-col="composer"] {
   height: auto !important;
   max-height: none !important;
   line-height: 1.3em !important;
