@@ -1,5 +1,5 @@
 # Minimal desktop player for Google Music
-![Screenshot](screenshot.png "Screenshot")
+![Screenshot](screenshot.jpg "Screenshot")
 
 ## Google Play Music Wrapper
 This is a UI wrapper for Google Music based on [Loop](https://github.com/twostairs/loop) and [electron-boilerplate](https://github.com/szwacz/electron-boilerplate) It is essentially like running Google Play Music in your Chrome browser, but as a native standalone app with some extra controls, nicer styles, and without having to use Flash.

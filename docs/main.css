@@ -13417,7 +13417,7 @@ html, body {
 
 header.hero, .body-index header {
   background-color: #EDEFF4;
-  background-image: url(hare-hoffmann.jpg);
+  background-image: url(ponce.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -13425,7 +13425,8 @@ header.hero, .body-index header {
 }
 header h1, header h2 {
   font-weight: 800;
-  color: #FC5830;
+  /*color: #FC5830;*/
+  color: white;
   font-size: 170px;
   text-shadow: 1px 0px 18px rgba(0, 0, 0, 0.07);
 }
@@ -13468,7 +13469,7 @@ header .btn-lg em {
 }
 header .btn-lg span {
   font-weight: 400;
-    color: #FED037;
+    color: #FC5830;
     clear: left;
     display: block;
     font-family: "IM Fell French Canon", times;
@@ -13480,9 +13481,9 @@ img.screenshot {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-  -webkit-box-shadow: 1px 21px 63px 7px rgba(0,0,0,1);
-  -moz-box-shadow: 1px 21px 63px 7px rgba(0,0,0,1);
-  box-shadow: 1px 21px 63px 7px rgba(0,0,0,1);
+  -webkit-box-shadow: 1px 21px 63px 7px rgba(0,0,0,0.2);
+  -moz-box-shadow: 1px 21px 63px 7px rgba(0,0,0,0.2);
+  box-shadow: 1px 21px 63px 7px rgba(0,0,0,0.2);
   width: 90%;
   display: block;
   margin: 40px auto 80px;
