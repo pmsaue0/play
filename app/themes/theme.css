@@ -105,6 +105,7 @@ gpm-action-buttons {
   height: auto !important;
   max-height: none !important;
   line-height: 1.3em !important;
+  padding-right: 4px;
   white-space: normal;
   text-indent: 0;
   overflow: visible;
@@ -127,6 +128,10 @@ gpm-action-buttons {
 
 .material .song-table .song-row.selected-song-row td {
     background-color: #FED037 !important;
+}
+
+.material .song-table .song-row.selected-song-row [data-col="rating"]:last-child {
+  background-color: transparent !important;
 }
 
 .material .cluster.material-cluster .header {
@@ -322,13 +327,17 @@ body.material .song-row td, body.material .upload-progress-row td {
   background: #fefefe;
 }
 
-// .material .album-view .cluster {
-//   margin-top: 140px;
-// }
-
 .material .album-view .cluster .header {
   margin-bottom: 34px;
 }
+
+.material .album-view .cluster .lane-button.next {
+  right: -25px;
+}
+.material .album-view .cluster .lane-button.prev {
+  left: -25px;
+}
+
 
 /* song table styles */
 
