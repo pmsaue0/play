@@ -65,6 +65,10 @@ body.material {
     box-shadow: inset 0px 5px 8px -1px rgba(0, 0, 0, 0.03);
 }
 
+.material table:not(.multiple-selected) .song-row:hover paper-icon-button[data-id="menu"], .material table:not(.multiple-selected) .song-row.selected-song-row paper-icon-button[data-id="menu"], .material table.multiple-selected .song-row:hover:not(.selected-song-row) paper-icon-button[data-id="menu"] {
+  z-index: 10;
+}
+
 .material-detail-view .has-hero-image {
     margin-top: 100px ;
 }
