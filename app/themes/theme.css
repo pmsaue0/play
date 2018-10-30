@@ -82,6 +82,10 @@ gpm-action-buttons {
     border-top: 1px solid rgba(255,255,255,0.2) ;
 }
 
+.gpm-detail-page-header > [slot="metadata"] span:last-child {
+  display: none;
+}
+
 .material .song-table .song-row td, .material .upload-progress-row td, .material .cluster-text-protection, .material .cluster-text-protection::before, body.qp .material .cluster-text-protection {
     background-color: transparent !important;
 }
