@@ -6,7 +6,13 @@ html {
   margin: 20px 0 40px 0;
 }
 
-.material .sj-scrolling-module #moduleHeader .home-palette-id-1, .material .sj-scrolling-module-0 h2, .material .sj-scrolling-module-0 h2 span, .material .home-palette-id-1, .material .sj-home .home-palette-id-1, .material .sj-home .home-palette-id-2, .material .sj-home a {
+.material .sj-scrolling-module #moduleHeader .home-palette-id-1,
+.material .sj-scrolling-module-0 h2,
+.material .sj-scrolling-module-0 h2 span,
+.material .home-palette-id-1,
+.material .sj-home .home-palette-id-1,
+.material .sj-home .home-palette-id-2,
+.material .sj-home a {
   color: #212121 !important;
 }
 
@@ -22,11 +28,13 @@ html {
   width: 80% !important;
 }
 
-#material-hero-image .iron-image, paper-header-panel#content-container.has-hero-image #app-bar-text-protection {
+#material-hero-image .iron-image,
+paper-header-panel#content-container.has-hero-image #app-bar-text-protection {
   background: none !important;
 }
 
-paper-drawer-panel iron-image#material-hero-image, #mainContainer {
+paper-drawer-panel iron-image#material-hero-image,
+#mainContainer {
   background-color: #f7f7f7 !important;
 }
 
@@ -34,13 +42,16 @@ paper-drawer-panel iron-image#material-hero-image, #mainContainer {
   margin-top: 100px !important;
 }
 
-#material-hero-image .iron-image, paper-header-panel#content-container.has-hero-image #app-bar-text-protection {
-    background: none ;
-    display: none;
+#material-hero-image .iron-image,
+paper-header-panel#content-container.has-hero-image #app-bar-text-protection {
+  background: none;
+  display: none;
 }
 
-.material .paper-toolbar-0 iron-icon, .material, .material paper-header-panel#content-container.transparent #material-app-bar {
-    color: #555;
+.material .paper-toolbar-0 iron-icon,
+.material,
+.material paper-header-panel#content-container.transparent #material-app-bar {
+  color: #555;
 }
 
 .material .sj-play-button-3 #pulse.sj-play-button,
@@ -54,45 +65,59 @@ paper-drawer-panel iron-image#material-hero-image, #mainContainer {
 }
 
 body.material {
-    background: transparent;
-    background-color: transparent;
-    font-family: "San Francisco Display", "Helvetica Neue", "Helvetica", arial;
+  background: transparent;
+  background-color: transparent;
+  font-family: "San Francisco Display", "Helvetica Neue", "Helvetica", arial;
 }
-
-
 
 .material .paper-header-panel-0 #dropShadow.paper-header-panel {
-    box-shadow: inset 0px 5px 8px -1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0px 5px 8px -1px rgba(0, 0, 0, 0.03);
 }
 
-.material table:not(.multiple-selected) .song-row:hover paper-icon-button[data-id="menu"], .material table:not(.multiple-selected) .song-row.selected-song-row paper-icon-button[data-id="menu"], .material table.multiple-selected .song-row:hover:not(.selected-song-row) paper-icon-button[data-id="menu"] {
+.material
+  table:not(.multiple-selected)
+  .song-row:hover
+  paper-icon-button[data-id="menu"],
+.material
+  table:not(.multiple-selected)
+  .song-row.selected-song-row
+  paper-icon-button[data-id="menu"],
+.material
+  table.multiple-selected
+  .song-row:hover:not(.selected-song-row)
+  paper-icon-button[data-id="menu"] {
   z-index: 10;
 }
 
 .material-detail-view .has-hero-image {
-    margin-top: 100px ;
+  margin-top: 100px;
 }
 
-.solid-hero .material-detail-view .has-hero-image, .material-album-container, .material .material-shadow-z1 {
-    background-color: rgba(255,255,255,0) ;
-    box-shadow: none;
+.solid-hero .material-detail-view .has-hero-image,
+.material-album-container,
+.material .material-shadow-z1 {
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: none;
 }
 
 gpm-action-buttons {
-    border-top: 1px solid rgba(255,255,255,0.2) ;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .gpm-detail-page-header > [slot="metadata"] span:last-child {
   display: none;
 }
 
-.material .song-table .song-row td, .material .upload-progress-row td, .material .cluster-text-protection, .material .cluster-text-protection::before, body.qp .material .cluster-text-protection {
-    background-color: transparent !important;
+.material .song-table .song-row td,
+.material .upload-progress-row td,
+.material .cluster-text-protection,
+.material .cluster-text-protection::before,
+body.qp .material .cluster-text-protection {
+  background-color: transparent !important;
 }
 
 .material .song-table .song-row td,
-.material .song-table.tight .song-row td
- {
+.material .song-table.tight .song-row td {
   height: 43px;
   line-height: 43px;
   max-height: 43px;
@@ -127,7 +152,12 @@ gpm-action-buttons {
   margin-top: -22px;
 }
 
-.material .album-view .song-table .song-row [data-col="track"] iron-icon.iron-icon-0,
+.material
+  .album-view
+  .song-table
+  .song-row
+  [data-col="track"]
+  iron-icon.iron-icon-0,
 .material .album-view .song-table .song-row [data-col="track"] .song-indicator {
   position: absolute;
   top: 50%;
@@ -135,10 +165,13 @@ gpm-action-buttons {
 }
 
 .material .song-table .song-row.selected-song-row td {
-    background-color: #FED037 !important;
+  background-color: #fed037 !important;
 }
 
-.material .song-table .song-row.selected-song-row [data-col="rating"]:last-child {
+.material
+  .song-table
+  .song-row.selected-song-row
+  [data-col="rating"]:last-child {
   background-color: transparent !important;
 }
 
@@ -152,87 +185,136 @@ gpm-action-buttons {
   display: inline-block;
 }
 
-.material .cluster.material-cluster .header .header-inner .cluster-title{
+.material .cluster.material-cluster .header .header-inner .cluster-title {
   line-height: 0;
   overflow: visible;
 }
 
 .material .song-table .song-row:hover td {
-    background-color: rgba(255,255,255,0) ;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .material .song-table .song-row:hover {
-    background-color: rgba(255,255,255,0.2) ;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .material-card .title::after {
-    display: none;
+  display: none;
 }
 
-.material .paper-slider-1 #sliderKnobInner.paper-slider, .material .paper-slider-0 #sliderKnobInner.paper-slider {
-    border: none;
+.material .paper-slider-1 #sliderKnobInner.paper-slider,
+.material .paper-slider-0 #sliderKnobInner.paper-slider {
+  border: none;
 }
 
 .material .paper-icon-button-0[disabled] {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
-#player paper-icon-button[data-id="play-pause"]:not([style-scope]):not(.style-scope):not([disabled]) {
-    opacity: 1;
+#player
+  paper-icon-button[data-id="play-pause"]:not([style-scope]):not(.style-scope):not([disabled]) {
+  opacity: 1;
 }
 
-.material .song-row td, .material .upload-progress-row td, a, .simple-dialog a, .material-detail-view .material-container-details .info .description, .material .song-table [data-col="title"], .material .song-table.mini [data-col="song-details"] .song-title {
-    color: inherit;
+.material .song-row td,
+.material .upload-progress-row td,
+a,
+.simple-dialog a,
+.material-detail-view .material-container-details .info .description,
+.material .song-table [data-col="title"],
+.material .song-table.mini [data-col="song-details"] .song-title {
+  color: inherit;
 }
 
-#material-volume-low, #material-vslider {
-    opacity: 1 ;
+#material-volume-low,
+#material-vslider {
+  opacity: 1;
 }
 
 .material .material-card .details {
-    background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .material .entity-card.material-card .details {
-    background: transparent;
+  background: transparent;
 }
 
 .material .fade-out:after {
-    display: none;
+  display: none;
 }
 
-.material .primary:not([style-scope]):not(.style-scope), .material #player paper-icon-button[data-id="play-pause"]:not([style-scope]):not(.style-scope):not([disabled]) {
-    color: inherit;
+.material .primary:not([style-scope]):not(.style-scope),
+.material
+  #player
+  paper-icon-button[data-id="play-pause"]:not([style-scope]):not(.style-scope):not([disabled]) {
+  color: inherit;
 }
 
-.material .album-view .material-album-container .song-table .song-row [data-col="track"] .song-indicator,
-.material .album-view .material-album-container .song-table .song-row .hover-button,
+.material
+  .album-view
+  .material-album-container
+  .song-table
+  .song-row
+  [data-col="track"]
+  .song-indicator,
+.material
+  .album-view
+  .material-album-container
+  .song-table
+  .song-row
+  .hover-button,
 .material .album-view .song-row [data-col="index"] .song-indicator,
 .material .album-view .song-row .aria-play-button,
 .material .album-view .song-row .hover-button,
-.material .playlist-view .material-album-container .song-table .song-row [data-col="track"] .song-indicator,
+.material
+  .playlist-view
+  .material-album-container
+  .song-table
+  .song-row
+  [data-col="track"]
+  .song-indicator,
 .material .song-table.tight .song-row [data-col="track"] .song-indicator,
-.material .playlist-view .material-album-container .song-table .song-row .hover-button,
+.material
+  .playlist-view
+  .material-album-container
+  .song-table
+  .song-row
+  .hover-button,
 .material .playlist-view .song-row [data-col="index"] .song-indicator,
 .material .playlist-view .song-row .aria-play-button,
 .material .playlist-view .song-row .hover-button {
-    left: -12px !important;
+  left: -12px !important;
 }
 
 .material .song-table.tight .song-row [data-col="track"] .song-indicator {
-    left: -20px !important;
+  left: -20px !important;
 }
 
-.material .auto-playlist-view .material-album-container .song-table .song-row [data-col="track"] .song-indicator,
-.material .auto-playlist-view .material-album-container .song-table .song-row .hover-button,
+.material
+  .auto-playlist-view
+  .material-album-container
+  .song-table
+  .song-row
+  [data-col="track"]
+  .song-indicator,
+.material
+  .auto-playlist-view
+  .material-album-container
+  .song-table
+  .song-row
+  .hover-button,
 .material .auto-playlist-view .song-row [data-col="index"] .song-indicator,
 .material .auto-playlist-view .song-row .aria-play-button,
 .material .auto-playlist-view .song-row .hover-button {
-    left: 0px !important;
+  left: 0px !important;
 }
 
 .material .song-table.tight .song-row [data-col="index"] .song-indicator,
-.material .song-table.tight .song-row td[data-col="index"] .hover-button.x-scope[data-id="play"]{
+.material
+  .song-table.tight
+  .song-row
+  td[data-col="index"]
+  .hover-button.x-scope[data-id="play"] {
   left: -10px;
 }
 
@@ -252,63 +334,64 @@ gpm-action-buttons {
 }
 
 .material .album-view .songlist-container {
-    min-height: 600px;
+  min-height: 600px;
 }
 
 .material .album-view .material-container-details .paper-fab-0,
 .material .playlist-view .material-container-details .paper-fab-0 {
-    background: transparent;
-    color: transparent;
-    width: 264px;
-    border-radius: 0;
-    height: 264px;
-    left: 0 ;
-    top: 0 ;
-    box-shadow: none;
-    z-index: 1;
+  background: transparent;
+  color: transparent;
+  width: 264px;
+  border-radius: 0;
+  height: 264px;
+  left: 0;
+  top: 0;
+  box-shadow: none;
+  z-index: 1;
 }
 
-
 .playlist-view .editable:hover {
-    background: transparent;
+  background: transparent;
 }
 
 body.material .song-row .column-content {
-    /* height: 32px; */
+  /* height: 32px; */
 }
 
-body.material .song-row td, body.material .upload-progress-row td {
+body.material .song-row td,
+body.material .upload-progress-row td {
 }
 
 .material .sub-title.fade-out.tooltip {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .material #player {
-    box-shadow: 0px 5px 8px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 5px 8px 8px rgba(0, 0, 0, 0.03);
 }
 
 .material gpm-action-buttons {
-    border-top: none;
+  border-top: none;
 }
 
 .material .album-view .material-container-details,
 .material .playlist-view .material-container-details {
-    position: relative;
-    width: 301px;
-    max-width: 0;
-    margin-top: 20px;
-    float: left;
+  position: relative;
+  width: 301px;
+  max-width: 0;
+  margin-top: 20px;
+  float: left;
 }
 
-.material .album-view .material-container-details+.song-table,
-.material .playlist-view .material-container-details+.song-table {
-    padding-left: 280px ;
-    margin-top: -65px;
+.material .album-view .material-container-details + .song-table,
+.material .playlist-view .material-container-details + .song-table {
+  padding-left: 280px;
+  margin-top: -65px;
 }
 
-.material gpm-action-buttons paper-button:last-of-type, gpm-action-buttons paper-icon-button:last-of-type {
-    margin: 0;
+.material gpm-action-buttons paper-button:last-of-type,
+gpm-action-buttons paper-icon-button:last-of-type {
+  margin: 0;
 }
 
 .material .material-detail-view .material-container-details .info .title {
@@ -324,7 +407,7 @@ body.material .song-row td, body.material .upload-progress-row td {
 }
 
 .material .song-row paper-icon-button[data-id="menu"] {
-    margin: 0;
+  margin: 0;
 }
 
 .material .sj-play-button-11 #pulse.sj-play-button {
@@ -346,10 +429,12 @@ body.material .song-row td, body.material .upload-progress-row td {
   left: -25px;
 }
 
-
 /* song table styles */
 
-.material .album-view .gpm-detail-page-header-0 #imageWrapper.gpm-detail-page-header {
+.material
+  .album-view
+  gpm-detail-page-header
+  #imageWrapper.gpm-detail-page-header {
   width: 420px;
   height: 420px;
   position: absolute;
@@ -357,7 +442,10 @@ body.material .song-row td, body.material .upload-progress-row td {
   left: 0;
 }
 
-.material .album-view .gpm-detail-page-header-0 .detail-wrapper.gpm-detail-page-header {
+.material
+  .album-view
+  gpm-detail-page-header
+  .detail-wrapper.gpm-detail-page-header {
   position: absolute;
   top: 420px;
   margin-top: 22px;
@@ -367,32 +455,51 @@ body.material .song-row td, body.material .upload-progress-row td {
   overflow: visible;
 }
 
-
-.material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="image"] {
+.material
+  .album-view
+  .gpm-detail-page-header-0
+  div.gpm-detail-page-header
+  > [slot="image"] {
   box-shadow: none;
   border-radius: 5px;
 }
 
-.material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header #explicitIcon {
+.material
+  .album-view
+  .gpm-detail-page-header-0
+  div.gpm-detail-page-header
+  #explicitIcon {
   display: none;
 }
 
-.material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="title"] {
+.material
+  .album-view
+  .gpm-detail-page-header-0
+  div.gpm-detail-page-header
+  > [slot="title"] {
   overflow: visible;
   white-space: normal;
   font-size: 24px;
   width: calc(100% - 50px);
   line-height: 1.2em;
   font-weight: 500;
-  color: rgba(0,0,0,0.7);
+  color: rgba(0, 0, 0, 0.7);
 }
 
-.material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="buttons"] {
-  color: rgba(0,0,0,0.5);
+.material
+  .album-view
+  .gpm-detail-page-header-0
+  div.gpm-detail-page-header
+  > [slot="buttons"] {
+  color: rgba(0, 0, 0, 0.5);
 }
 
-.material .album-view .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="subtitle"] {
-  color: #FF5722;
+.material
+  .album-view
+  .gpm-detail-page-header-0
+  div.gpm-detail-page-header
+  > [slot="subtitle"] {
+  color: #ff5722;
   font-size: 24px;
   text-overflow: initial;
   overflow: visible;
@@ -404,7 +511,6 @@ body.material .song-row td, body.material .upload-progress-row td {
   width: calc(100% - 50px);
 }
 
-
 .material .album-view .song-table {
   position: relative;
   top: -83px;
@@ -413,12 +519,17 @@ body.material .song-row td, body.material .upload-progress-row td {
   min-width: 480px;
 }
 
-.material .album-view .gpm-detail-page-header-0 .detail-wrapper.gpm-detail-page-header > div.gpm-detail-page-header {
+.material
+  .album-view
+  .gpm-detail-page-header-0
+  .detail-wrapper.gpm-detail-page-header
+  > div.gpm-detail-page-header {
   align-items: flex-start;
   margin-bottom: 0;
 }
 
-.detail-view .view-header paper-button, .gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="buttons"] {
+.detail-view .view-header paper-button,
+.gpm-detail-page-header-0 div.gpm-detail-page-header > [slot="buttons"] {
   margin-top: 0;
   color: #aeaeae;
   text-align: left;
@@ -428,7 +539,8 @@ body.material .song-row td, body.material .upload-progress-row td {
   display: none;
 }
 
-.material #quick-nav-container gpm-quick-nav, .material #quickNavContainer {
+.material #quick-nav-container gpm-quick-nav,
+.material #quickNavContainer {
   display: none !important;
 }
 
@@ -438,7 +550,6 @@ body.material .song-row td, body.material .upload-progress-row td {
   right: 0;
 }
 
-
 .material .song-table [data-col="rating"]:last-child {
   width: 70px !important;
   border-bottom: none;
@@ -446,10 +557,10 @@ body.material .song-row td, body.material .upload-progress-row td {
 
 .material .song-table [data-col="rating"][data-rating="5"],
 .material .song-table [data-col="rating"][data-rating="1"] {
-    display: block;
-    position: relative;
-    top: 4px;
-  }
+  display: block;
+  position: relative;
+  top: 4px;
+}
 
 @media screen and (min-resolution: 1.5dppx) {
   .material .song-table [data-col="rating"]:last-child {
@@ -464,12 +575,20 @@ body.material .song-row td, body.material .upload-progress-row td {
 }
 
 @media (max-width: 1300px) {
-  .material paper-drawer-panel.mini-nav-enabled paper-header-panel #music-content .g-content,
-  .material paper-drawer-panel.mini-nav-enabled paper-header-panel #music-content .recent-view {
+  .material
+    paper-drawer-panel.mini-nav-enabled
+    paper-header-panel
+    #music-content
+    .g-content,
+  .material
+    paper-drawer-panel.mini-nav-enabled
+    paper-header-panel
+    #music-content
+    .recent-view {
     margin: 21px !important;
     width: calc(100% - 42px) !important;
   }
-/*  .material .song-table [data-col="rating"]:last-child {
+  /*  .material .song-table [data-col="rating"]:last-child {
     width: 70px !important;
     background-position-y: -12px !important;
   }*/
